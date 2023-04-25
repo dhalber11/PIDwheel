@@ -12,3 +12,6 @@ Code:
 Assembly: 5/10 
 Documentation: 5/20
 due date: June 1rst 
+
+## Description
+For this project we were assigned to make a project using PID (Porportional, Integral, Derivative) which we used to control a variable. The requirements was to use a 6AA battery pack and include a power switch and LED. 
