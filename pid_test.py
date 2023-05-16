@@ -25,6 +25,7 @@ time1= 0
 time2= 0 
 rpm =0
 lastVal = True
+lastlog = True
 
 enc = rotaryio.IncrementalEncoder(board.D9, board.D8,divisor=4)
 
@@ -37,20 +38,26 @@ encbtn  = digitalio.Pull.UP
 
 log =1
 intTime = 0
-while True:
-    # enc.position = max(min(enc.position, 100),20)
+while True: 
+    enc.position = max(min(enc.position, 100),20)
     # print(f"{interrupter.value} {int(simpleio.map_range(enc.position,0, 100, 0, 6553))} {rpm} {interrupts} {interrupts %5} ")
     # time.sleep(0.01)
-    # motorpin.value = (int(simpleio.map_range(enc.position,0, 100, 0, 65535)))
+    motorpin.value = (int(simpleio.map_range(enc.position,0, 100, 0, 65535)))
+    #print(f"{interrupter.value}" )
     # time.sleep(0.01)
     intTime +=1
     print(f"{intTime} {log}")
-    # time.sleep(.0000001)
+    time.sleep(.001)
     if intTime % 500 ==1 :
         log +=1
+        time.sleep(0.001)
         if interrupter.value and interrupter.value != lastVal:
             interrupts += 1 
             lastVal = True
+    if log != lastlog and interrupter.value == True:
+        #calculate rpm
+        
+        lastlog = log
         
 
 
