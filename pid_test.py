@@ -20,9 +20,9 @@ x=PID
 
 motorpin = AnalogOut(board.A1)
 
-interrupter = DigitalInOut(board.D6)
-interrupter.direction = Direction.INPUT
-interrupter.pull = Pull.UP
+Interrupter = DigitalInOut(board.D6)
+Interrupter.direction = Direction.INPUT
+Interrupter.pull = Pull.UP
 
 interrupts = 0
 time1= 0
@@ -48,51 +48,44 @@ class RPMCalculator:
     
     def __init__(self) -> None:
         
-
-        self.time1 = 0
-        self.time2 = 0
         self.printingDelayCounter =0
         self.lastPollingVal = False
         self.RPM = 0
         self.totalInterrupts =0
-        self.lastInterrupt = -1
+        self.time1 =0.0
+        self.time2 =0.0
         
     def debug(self,DelayInterval=500):
         if self.printingDelayCounter % DelayInterval == 1 :
             #all debug statements 
-            print(f"{self.totalInterrupts} RPM: {self.RPM} {self.time1} {self.time2}")
+            print(f"{self.totalInterrupts} RPM: {self.RPM}  {self.time1}  {self.time2}")
     
-    def RpmCompute(self):
+
+
         
-        if self.totalInterrupts % 2 == 0 and self.lastInterrupt != self.totalInterrupts: 
-            self.time1= time.monotonic()
-            self.RPM = 1/((self.time1-self.time2 + .0001)/2)
-            self.lastInterrupt = self.totalInterrupts
-
-        elif self.totalInterrupts % 2 == 1 and self.lastInterrupt != self.totalInterrupts:
-            self.time2 = time.monotonic()
-            # print(self.time2,self.time1)
-            self.RPM = 1/((self.time2-self.time1 + .0001)/2)
-
-            self.lastInterrupt = self.totalInterrupts
-
-            return self.RPM
-        else:
-            self.lastInterrupt = self.totalInterrupts
             
-            # takes time at first and 10th interupt on cycyle and takes time from first interrupt and 10th and 
-            # gets the diffrence then devide 60 by that number to get the RPM
-            
-    def pollingForInterrupts(self):
+    def RPMcompute(self):
         
-        if interrupter.value and interrupter.value != self.lastPollingVal:
+        if Interrupter.value and Interrupter.value != self.lastPollingVal:
             self.totalInterrupts += 1 
             self.lastPollingVal = True
+
+            if self.totalInterrupts % 2 == 0:
+                self.time1= time.monotonic_ns() 
+                self.RPM = 1/((self.time1-self.time2)/(10 **9)/5) 
             
-        if  not interrupter.value:
+            elif self.totalInterrupts % 2 == 1:
+                self.time2 = time.monotonic_ns() 
+                self.RPM = 1/((self.time2-self.time1)/(10 **9)/5)
+                return self.RPM
+                # takes time at first and 10th interupt on cycyle and takes time from first interrupt and 10th and 
+                # gets the diffrence then devide 60 by that number to get the RPM
+            
+        if  not Interrupter.value:
             self.lastPollingVal = False
 
-RPMCalculator1 = RPMCalculator()
+RPMCalc = RPMCalculator()
+
 
 while True: 
     enc.position = max(min(enc.position, 100),20)
@@ -100,18 +93,12 @@ while True:
     #print(f"{intTime} {log} {interrupts} {rpm}")
     #time.sleep(.001)
     
-
-    RPMCalculator1.RpmCompute()
-
-    RPMCalculator1.printingDelayCounter += 1
-
-    RPMCalculator1.debug(DelayInterval=500)
+    time.sleep(.0001)
+    RPMCalc.printingDelayCounter += 1
+    RPMCalc.debug(DelayInterval=500)
+    RPMCalc.RPMcompute()
     
-  
     
-    RPMCalculator1.pollingForInterrupts()
-    
-        
 
 
       
