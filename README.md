@@ -4,11 +4,11 @@
 Our project is a wheel box controlled by PID. It will work similar to cruise control speeding up or slowing down the based on the set value. We will choose this value with a rotary encoder and an LCD screen. We hope to keep this project simple but effective and to sharpen the PID over out time period. 
 
 ## Schedule 
-CAD: 4/24 or week of 
-Code: 6/1
-Assembly: 5/10 
-Documentation: 5/20
-due date: June 1rst 
+* CAD: 4/24 or week of 
+* Code: 6/1
+* Assembly: 5/10 
+* Documentation: 5/20
+* due date: June 1rst 
 
 For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. (Dylan talk here). For the assembly I finished on time but I couldn't fully manufacture until the end (bcause of wiring) which is something to consider for later projects. We also ended up straying from the design a little with the front panel(adding another switch) and on the side another peice of a breaboard, this is another reason you shouldn't fully put it together without the wiring and electronics. For the documentation we didn't finish by the time we thought and ended up finishing 6/1-2 so it was a good lesson to give time for documentation which is arguably thre most important part of the project.
 
@@ -19,6 +19,9 @@ For the CAD it was fairly simple and I got it done by the time limit. There was 
 For this project we were assigned to make a project using PID (Porportional, Integral, Derivative) which we used to control a variable. The requirements was to use a 6AA battery pack and include a power switch and LED. We chose to do a wheel box to demonstrate the PID similar to cruise control. This project utilizes Dylan's code skills for the most part and Jinho's CAD skills. 
 
 ## Problem to Solve
+
+The need for a continuos input from a human/source to keep a certain speed for a car or wheel. The PID solves this problem letting you sit back and relax, an example is cruise control. 
+
 ## S.M.A.R.T Goal
 By June 2nd we will have built a box that will utilize PID to set the speed for a wheel and motor. When you move the Rotary encoder it will set the speed and appear on the LCD. 
 
