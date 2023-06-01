@@ -10,7 +10,7 @@ Assembly: 5/10
 Documentation: 5/20
 due date: June 1rst 
 
-For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. 
+For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. (Dylan talk here). For the assembly I finished on time but I couldn't fully manufacture until the end (bcause of wiring) which is something to consider for later projects. We also ended up straying from the design a little with the front panel(adding another switch) and on the side another peice of a breaboard, this is another reason you shouldn't fully put it together without the wiring and electronics.
 
 ![image](https://github.com/dhalber11/PIDwheel/assets/113122312/79db7c5e-b936-459c-856f-181fc560ac8e)
 
@@ -20,6 +20,7 @@ For this project we were assigned to make a project using PID (Porportional, Int
 
 ## Problem to Solve
 ## S.M.A.R.T Goal
+By June 2nd we will have built a PID box that can spin a wheel to a set speed using PID. It will use RPM to calculate the speed and have an LCD display to show it. When you move the Rotary encoder it will tell the PID what to acheive. 
 
 ## Evidence 
 [onshape link](https://cvilleschools.onshape.com/documents/bc5dd0b5deaae27b6921b19d/w/315ed26b23bfec5e6ab30054/e/6f96dca158f149fec61f898a)
@@ -35,6 +36,15 @@ Caption
 ## Criteria and constraints
 
 ### Criteria 
+-LED
+-LCD
+-Has to be able to use PID
+-Rotary encoder
+Switches 
+-DC motor and wheel
 
 ### Constraints
-
+-Time
+-Resources
+-Resources for PID (like libraries)
+-
