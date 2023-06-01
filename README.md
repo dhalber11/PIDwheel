@@ -36,15 +36,11 @@ Caption
 ## Criteria and constraints
 
 ### Criteria 
--LED
--LCD
--Has to be able to use PID
--Rotary encoder
-Switches 
--DC motor and wheel
+LED                                                                                                                                  -LCD                                                                                                                                  -Has to be able to use PID-Rotary encoder
+Switches                                                                                                                              DC motor and wheel
 
 ### Constraints
--Time
--Resources
--Resources for PID (like libraries)
--
+Time
+Resources
+Resources for PID (like libraries)
+
