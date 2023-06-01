@@ -36,6 +36,10 @@ By June 2nd we will have built a box that will utilize PID to set the speed for 
 ![unnamed](https://user-images.githubusercontent.com/113122312/232816832-5ecfbff9-cc31-49a1-a10a-9a1f94366619.jpg)
 For the most part the design stayed the same, we had the wheel and LCD on the top and we stuck with the T-slots. The only thing we changed was the front panel which we decided to have 1 line of controls with 2 switches, 1 LED, and a rotary encoder.
 
+## Code
+### Goals 
+For this assignment we wanted to use an encoder 
+
 ## Criteria and constraints
 
 ### Criteria 
