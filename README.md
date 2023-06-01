@@ -100,6 +100,8 @@ RPMCalc.printingDelayCounter += 1
     RPMCalc.debug(DelayInterval=500)
     RPMCalc.RPMcompute()
 ```
+### PID
+This is where we fell short on this project. Because of how long the process of finding RPM took we ran out of time to incorporate PID. 
 ## Criteria and constraints
 
 ### Criteria 
