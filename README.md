@@ -38,7 +38,16 @@ For the most part the design stayed the same, we had the wheel and LCD on the to
 
 ## Code
 ### Goals 
-For this assignment we wanted to use an encoder 
+For this assignment we wanted to use an encoder to control a dc motor and a photointerrupter to read the RPM of that motor as its spinning. The criteria of the project state that we have to use PID to get a smooth value from the encoder to the motor. This project is very code intensive therefore there will be extensive documentation on the many issues that we had while trying to code this project. I wanted to go step by step in doing this project so I decided to start by getting a working encoder that then controlled a motor. Once that was working I started work on the photointerrupter to read the rpm of that motor. This proved to be the most difficult part. Finally I wanted to add in the PID to finish the project. 
+
+### Motor and Encoder
+This was the easiest part of the coding process for me. In a combination of my peers and my past documentation it was very simple to get a motor spinning to the encoder. All in all it took two lines of code and was very simple to create. I started by limiting the encoder between 0-100, this was simply an accesibility fix because I wanted to get a quicker response between the motor and encoder. This was because if the motor was at its highest RPM and you continued to spin the encoder you would have to spin it all the way back before the values began to change. The limits stopped the values of the encoder so as soon as you began to spin it back the motor responded. Once that was done there was only the issue of mapping the encoder value to the motor. This was very simple and all in all the code for this whole section came out to just a few lines. Using past documentation it was very simple code. 
+
+python```
+while True: 
+    enc.position = max(min(enc.position, 100),20)  #limits the encoder to the mapped value range
+    motorpin.value = (int(simpleio.map_range(enc.position,0, 100, 0, 65535))) #maps the encoder value to the motor 
+```
 
 ## Criteria and constraints
 
