@@ -5,10 +5,15 @@ Our project is a wheel box controlled by PID. It will work similar to cruise con
 
 ## Schedule 
 CAD: 4/24 or week of 
-Code:
+Code: 6/1
 Assembly: 5/10 
 Documentation: 5/20
 due date: June 1rst 
+
+For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. 
+
+![image](https://github.com/dhalber11/PIDwheel/assets/113122312/79db7c5e-b936-459c-856f-181fc560ac8e)
+
 
 ## Description
 For this project we were assigned to make a project using PID (Porportional, Integral, Derivative) which we used to control a variable. The requirements was to use a 6AA battery pack and include a power switch and LED. We chose to do a wheel box to demonstrate the PID similar to cruise control. This project utilizes Dylan's code skills for the most part and Jinho's CAD skills. 
