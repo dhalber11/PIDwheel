@@ -30,7 +30,11 @@ By June 2nd we will have built a box that will utilize PID to set the speed for 
 
 ## Image 
 ![image](https://github.com/dhalber11/PIDwheel/assets/113122312/1aab1c93-ee6f-447d-937e-59c4fc4b6bea)
-![image](https://github.com/dhalber11/PIDwheel/assets/113122312/2accb607-c651-4054-a02c-0275baa62f2e)
+![Screenshot 2023-06-01 10 31 54 PM](https://github.com/dhalber11/PIDwheel/assets/113122312/a64a1bf3-57a8-459b-8d2c-994421ab17c4)
+![unnamed](https://github.com/dhalber11/PIDwheel/assets/113122312/8d4feadb-e39b-4552-9924-7dc04c27270d)
+![unnamed](https://github.com/dhalber11/PIDwheel/assets/113122312/d4428668-63a0-42e7-b892-13bceb14995a)
+![unnamed](https://github.com/dhalber11/PIDwheel/assets/113122312/9c862686-9633-46ee-8a2a-512babb4dc16)
+
 
 ## Early Design 
 ![unnamed](https://user-images.githubusercontent.com/113122312/232816832-5ecfbff9-cc31-49a1-a10a-9a1f94366619.jpg)
@@ -119,3 +123,6 @@ The solution we found was to wire a switch to a pin on the board so that it was 
 * Materials
 * Resources for PID (like libraries)
 
+## Refletion
+
+This project was challenging and broadened out code knowledge to more real life applications. One thing I learned for CAD was to make sure your project isn't too small or too big by putting it next to a part or something for reference before manufacturing the whole thing. 
