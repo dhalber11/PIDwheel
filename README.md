@@ -124,6 +124,11 @@ The solution we found was to wire a switch to a pin on the board so that it was 
 * Materials
 * Resources for PID (like libraries)
 
+### wiring diagram
+
+![image](https://github.com/dhalber11/PIDwheel/assets/113122312/9f1a9897-c018-4a30-aef1-6fa96f879815)
+
+
 ## Refletion
 
 This project was challenging and broadened out code knowledge to more real life applications. One thing I learned for CAD was to make sure your project isn't too small or too big by putting it next to a part or something for reference before manufacturing the whole project in a part studio. Another problem I mentioned earlier was the T-slot tool that was a bit finicky, but I still definitely reccomend using them. Some very useful tools for this are Spur Gear, Laser joint, Rack and Pinion, etc you can find these by looking at the top right of your screen and clicking "add custom features" and look up the name of the tool. Antoher thing I also learned was that when putting in an arduino to make sure that there is an access hole in the wall or some place so the code can be adjusted and imported without having to disassemble the whole thing (especially because code implimentation usually is towards the end of the project). For the assembly I learned that it takes much longer than you may think because ogf wiring and puitting in parts so its best to finish CAD quickly. The main issue with this project was the time management, next time we would make sure to knock out the CAD and assembly quickly so I can help my partner more with code and PID which were the main parts. If we were more focused in the beggining we wouldn't have ran into this problem so this has been a real eye opener for time management and how important scheduling is in the beggining of the year. I also realized this year that CAD alone won't cut it and I need to start taking code more seriously for the future. I have always been more interested in CAD and I though it wwould be enough but for code intensive projects like this it is vital for a wider code knowledge so I can help my partner and the project.
