@@ -128,6 +128,7 @@ The solution we found was to wire a switch to a pin on the board so that it was 
 
 ![image](https://github.com/dhalber11/PIDwheel/assets/113122312/9f1a9897-c018-4a30-aef1-6fa96f879815)
 
+help with this diagram [Paul Weder & Cyrus Wyatt](https://github.com/japhero/PID-project)
 
 ## Refletion
 
