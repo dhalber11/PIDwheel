@@ -10,9 +10,6 @@ Our project is a wheel box controlled by PID. It will work similar to cruise con
 * Documentation: 5/20
 * due date: June 1rst 
 
-For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. (Dylan talk here). For the assembly I finished on time but I couldn't fully manufacture until the end (bcause of wiring) which is something to consider for later projects. We also ended up straying from the design a little with the front panel(adding another switch) and on the side another peice of a breaboard, this is another reason you shouldn't fully put it together without the wiring and electronics. For the documentation we didn't finish by the time we thought and ended up finishing 6/1-2 so it was a good lesson to give time for documentation which is arguably thre most important part of the project. I also learned for the assembly 
-
-![image](https://github.com/dhalber11/PIDwheel/assets/113122312/79db7c5e-b936-459c-856f-181fc560ac8e)
 
 ## Description
 For this project we were assigned to make a project using PID (Porportional, Integral, Derivative) which we used to control a variable. The requirements was to use a 6AA battery pack and include a power switch and LED. We chose to do a wheel box to demonstrate the PID similar to cruise control. This project utilizes Dylan's code skills for the most part and Jinho's CAD skills. 
@@ -37,20 +34,40 @@ By June 2nd we will have built a box that will utilize PID to set the speed for 
 * Materials
 * Resources for PID (like libraries)
 
-### wiring diagram
+### Bill of Materials
+* Metro M4 Airlift Lyte 
+* DC motor with Transistor and Diode
+* Rotary Encoder
+* Adafruit Photointerrupter
+* Lcd (with i2c backpack)
+* Switches (For power and LCD)
+* 9V and 6V AA battery packs 
+* Acrylic walls and 3d printed mounts
 
-![image](https://github.com/dhalber11/PIDwheel/assets/113122312/9f1a9897-c018-4a30-aef1-6fa96f879815)
-
-help with this diagram [Paul Weder & Cyrus Wyatt](https://github.com/japhero/PID-project)
 
 ## Early Design 
 ![unnamed](https://user-images.githubusercontent.com/113122312/232816832-5ecfbff9-cc31-49a1-a10a-9a1f94366619.jpg)
 For the most part the design stayed the same, we had the wheel and LCD on the top and we stuck with the T-slots. The only thing we changed was the front panel which we decided to have 1 line of controls with 2 switches, 1 LED, and a rotary encoder.
 
+# Onshape Design Process
+
 ## Evidence 
 [onshape link](https://cvilleschools.onshape.com/documents/bc5dd0b5deaae27b6921b19d/w/315ed26b23bfec5e6ab30054/e/6f96dca158f149fec61f898a)
 
-## Image 
+## Wiring Diagram
+
+![image](https://github.com/dhalber11/PIDwheel/assets/113122312/9f1a9897-c018-4a30-aef1-6fa96f879815)
+
+help with this diagram [Paul Weder & Cyrus Wyatt](https://github.com/japhero/PID-project)
+
+For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. (Dylan talk here). For the assembly I finished on time but I couldn't fully manufacture until the end (bcause of wiring) which is something to consider for later projects. We also ended up straying from the design a little with the front panel(adding another switch) and on the side another peice of a breaboard, this is another reason you shouldn't fully put it together without the wiring and electronics. For the documentation we didn't finish by the time we thought and ended up finishing 6/1-2 so it was a good lesson to give time for documentation which is arguably thre most important part of the project. I also learned for the assembly 
+
+
+
+## Images
+![image](https://github.com/dhalber11/PIDwheel/assets/113122312/79db7c5e-b936-459c-856f-181fc560ac8e)
+
+ 
 ![image](https://github.com/dhalber11/PIDwheel/assets/113122312/1aab1c93-ee6f-447d-937e-59c4fc4b6bea)
 ![Screenshot 2023-06-01 10 31 54 PM](https://github.com/dhalber11/PIDwheel/assets/113122312/a64a1bf3-57a8-459b-8d2c-994421ab17c4)
 ![unnamed](https://github.com/dhalber11/PIDwheel/assets/113122312/8d4feadb-e39b-4552-9924-7dc04c27270d)
@@ -59,7 +76,7 @@ For the most part the design stayed the same, we had the wheel and LCD on the to
 
 https://github.com/dhalber11/PIDwheel/assets/113122312/c56fbf0c-2e16-45e3-9956-1e5cb16f37f8
 
-## Code
+# Code
 ### Goals 
 For this assignment we wanted to use an encoder to control a dc motor and a photointerrupter to read the RPM of that motor as its spinning. The criteria of the project state that we have to use PID to get a smooth value from the encoder to the motor. This project is very code intensive therefore there will be extensive documentation on the many issues that we had while trying to code this project. I wanted to go step by step in doing this project so I decided to start by getting a working encoder that then controlled a motor. Once that was working I started work on the photointerrupter to read the rpm of that motor. This proved to be the most difficult part. Additionally there was the issue of the LCD which was mainly rooted in wiring. Finally I wanted to add in the PID to finish the project.
 
@@ -131,7 +148,7 @@ We wanted to include this as part of our documentation as it highlights another 
 The solution we found was to wire a switch to a pin on the board so that it was possible to do a Pull-Up on the LCD to reduce the sucking of power through the SDA and SCL pins which turned out to be the issue. This was a small issue but an annoying one as I had never had this issue with LCD i2c's in the past. This was a helpful issue to solve as it gave me a little more neccessary insight into how certain circuits work. 
 
 
-## Refletion
+## Reflection
 
 This project was challenging and broadened out code knowledge to more real life applications. One thing I learned for CAD was to make sure your project isn't too small or too big by putting it next to a part or something for reference before manufacturing the whole project in a part studio. Another problem I mentioned earlier was the T-slot tool that was a bit finicky, but I still definitely reccomend using them. Some very useful tools for this are Spur Gear, Laser joint, Rack and Pinion, etc you can find these by looking at the top right of your screen and clicking "add custom features" and look up the name of the tool. Antoher thing I also learned was that when putting in an arduino to make sure that there is an access hole in the wall or some place so the code can be adjusted and imported without having to disassemble the whole thing (especially because code implimentation usually is towards the end of the project). For the assembly I learned that it takes much longer than you may think because ogf wiring and puitting in parts so its best to finish CAD quickly. The main issue with this project was the time management, next time we would make sure to knock out the CAD and assembly quickly so I can help my partner more with code and PID which were the main parts. If we were more focused in the beggining we wouldn't have ran into this problem so this has been a real eye opener for time management and how important scheduling is in the beggining of the year. I also realized this year that CAD alone won't cut it and I need to start taking code more seriously for the future. I have always been more interested in CAD and I though it wwould be enough but for code intensive projects like this it is vital for a wider code knowledge so I can help my partner and the project.
 
