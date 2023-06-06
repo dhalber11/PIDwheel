@@ -10,10 +10,9 @@ Our project is a wheel box controlled by PID. It will work similar to cruise con
 * Documentation: 5/20
 * due date: June 1rst 
 
-For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. (Dylan talk here). For the assembly I finished on time but I couldn't fully manufacture until the end (bcause of wiring) which is something to consider for later projects. We also ended up straying from the design a little with the front panel(adding another switch) and on the side another peice of a breaboard, this is another reason you shouldn't fully put it together without the wiring and electronics. For the documentation we didn't finish by the time we thought and ended up finishing 6/1-2 so it was a good lesson to give time for documentation which is arguably thre most important part of the project.
+For the CAD it was fairly simple and I got it done by the time limit. There was a couple of problems I ran into, the main one was the T-slot joints. The T-slot tool was't working like I thought it would and it was making the bolts to close to the end and it was hard to find the right screw length. I ended up importing a T-slot from a different studio earlier in the year because I knew it would work but it was much less efficient. (Dylan talk here). For the assembly I finished on time but I couldn't fully manufacture until the end (bcause of wiring) which is something to consider for later projects. We also ended up straying from the design a little with the front panel(adding another switch) and on the side another peice of a breaboard, this is another reason you shouldn't fully put it together without the wiring and electronics. For the documentation we didn't finish by the time we thought and ended up finishing 6/1-2 so it was a good lesson to give time for documentation which is arguably thre most important part of the project. I also learned for the assembly 
 
 ![image](https://github.com/dhalber11/PIDwheel/assets/113122312/79db7c5e-b936-459c-856f-181fc560ac8e)
-
 
 ## Description
 For this project we were assigned to make a project using PID (Porportional, Integral, Derivative) which we used to control a variable. The requirements was to use a 6AA battery pack and include a power switch and LED. We chose to do a wheel box to demonstrate the PID similar to cruise control. This project utilizes Dylan's code skills for the most part and Jinho's CAD skills. 
@@ -24,6 +23,29 @@ The need for a continuos input from a human/source to keep a certain speed for a
 
 ## S.M.A.R.T Goal
 By June 2nd we will have built a box that will utilize PID to set the speed for a wheel and motor. When you move the Rotary encoder it will set the speed and appear on the LCD. 
+
+## Criteria and constraints
+
+### Criteria 
+* LED                                                                                                                                
+* LCD
+* Has to be able to use PID-Rotary encoder Switches
+* DC motor and wheel
+
+### Constraints
+* Time
+* Materials
+* Resources for PID (like libraries)
+
+### wiring diagram
+
+![image](https://github.com/dhalber11/PIDwheel/assets/113122312/9f1a9897-c018-4a30-aef1-6fa96f879815)
+
+help with this diagram [Paul Weder & Cyrus Wyatt](https://github.com/japhero/PID-project)
+
+## Early Design 
+![unnamed](https://user-images.githubusercontent.com/113122312/232816832-5ecfbff9-cc31-49a1-a10a-9a1f94366619.jpg)
+For the most part the design stayed the same, we had the wheel and LCD on the top and we stuck with the T-slots. The only thing we changed was the front panel which we decided to have 1 line of controls with 2 switches, 1 LED, and a rotary encoder.
 
 ## Evidence 
 [onshape link](https://cvilleschools.onshape.com/documents/bc5dd0b5deaae27b6921b19d/w/315ed26b23bfec5e6ab30054/e/6f96dca158f149fec61f898a)
@@ -36,10 +58,6 @@ By June 2nd we will have built a box that will utilize PID to set the speed for 
 ![unnamed](https://github.com/dhalber11/PIDwheel/assets/113122312/9c862686-9633-46ee-8a2a-512babb4dc16)
 
 https://github.com/dhalber11/PIDwheel/assets/113122312/c56fbf0c-2e16-45e3-9956-1e5cb16f37f8
-
-## Early Design 
-![unnamed](https://user-images.githubusercontent.com/113122312/232816832-5ecfbff9-cc31-49a1-a10a-9a1f94366619.jpg)
-For the most part the design stayed the same, we had the wheel and LCD on the top and we stuck with the T-slots. The only thing we changed was the front panel which we decided to have 1 line of controls with 2 switches, 1 LED, and a rotary encoder.
 
 ## Code
 ### Goals 
@@ -111,24 +129,7 @@ This is where we fell short on this project. Because of how long the process of 
 ### LCD
 We wanted to include this as part of our documentation as it highlights another issue that we had to tackle during this project. The LCD that we were using had an i2c backpack and was wired to the SDA and SCL pins. Originally we had an issue where the LCD was pulling too much power and the board would not be able to boot. However we did not realize this at the time and since it was early in my progression of coding I decided to scrap it and move on to the next part and come back to it. As we came back to it however we realized that the issue is a little more serious than simply a power difference. My first attempt at fixing the issue was plugging the power to the LCD straight into a 6v battery pack, seperate from the board itself. However this did not seem to work and the board continued to "brown out", a term used when the board is recieving too low voltage to function. This was odd as the LCD should have been taking power from the battery pack and not from the board. To solve this issue I turned to Mr.Helmstetter for some insight on the issue.
 The solution we found was to wire a switch to a pin on the board so that it was possible to do a Pull-Up on the LCD to reduce the sucking of power through the SDA and SCL pins which turned out to be the issue. This was a small issue but an annoying one as I had never had this issue with LCD i2c's in the past. This was a helpful issue to solve as it gave me a little more neccessary insight into how certain circuits work. 
-## Criteria and constraints
 
-### Criteria 
-* LED                                                                                                                                
-* LCD
-* Has to be able to use PID-Rotary encoder Switches
-* DC motor and wheel
-
-### Constraints
-* Time
-* Materials
-* Resources for PID (like libraries)
-
-### wiring diagram
-
-![image](https://github.com/dhalber11/PIDwheel/assets/113122312/9f1a9897-c018-4a30-aef1-6fa96f879815)
-
-help with this diagram [Paul Weder & Cyrus Wyatt](https://github.com/japhero/PID-project)
 
 ## Refletion
 
